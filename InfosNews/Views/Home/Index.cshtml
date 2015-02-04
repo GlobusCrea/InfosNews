@@ -1,0 +1,53 @@
+﻿@model IEnumerable<InfosNews.DAL.News>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idNews)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idAuteur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewsPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewsDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewsTitre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewsTxt)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idNews)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idAuteur)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewsPicture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewsDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewsTitre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewsTxt)
+        </td>
+    </tr>
+}
+
+</table>
