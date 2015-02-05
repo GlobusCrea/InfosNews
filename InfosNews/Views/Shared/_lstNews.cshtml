@@ -1,6 +1,19 @@
 ﻿@model InfosNews.DAL.News
 
-@Model.NewsTitre
-@Model.NewsPicture
-@Model.NewsTxt
-@Model.NewsDate
+<!-- begin more articles -->
+<div class="articles">
+    <h2 class="title">More News</h2>
+    <!-- begin post -->
+    <div class="post">
+        <div class="thumb"><a href="~/News/NewsDetail/@Model.idNews"><img src="~/Content/images/@Model.NewsPicture" alt="" /></a></div>
+        <h2><a href="~/News/NewsDetail/@Model.idNews">@Model.NewsTitre</a></h2>
+        <p>@Model.NewsResume</p>
+        <div class="details">
+            <p class="l"> <span class="category"><a href="#">Catégorie</a></span> - Posted by <a href="#">@Model.idAuteur</a> on @Model.NewsDate</p>
+            <p class="r"> <a href="#">!!!Comments à implémenter!!!</a> </p>
+        </div>
+    </div>
+    <!-- end post -->
+    <div class="break"></div>
+</div>
+<!-- end more articles -->

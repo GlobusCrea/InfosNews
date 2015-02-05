@@ -7,14 +7,14 @@ using System.Web.Mvc;
 
 namespace InfosNews.Controllers
 {
-    public class HomeController : Controller
+    public class NewsController : Controller
     {
         //
-        // GET: /Home/
-        public ActionResult Index()
+        // GET: /News/
+        public ActionResult NewsDetail(int id)
         {
-            List<News> mesNews = News.getFiveNews();
-            return View(mesNews);
+            News newsDetail = News.getOneNews(id);
+            return View(newsDetail);
         }
 	}
 }

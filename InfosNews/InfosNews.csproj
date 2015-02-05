@@ -77,9 +77,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\images\200x150.gif" />
+    <Content Include="Content\images\ad125x125.jpg" />
+    <Content Include="Content\images\ad468x60.gif" />
+    <Content Include="Content\images\details.gif" />
+    <Content Include="Content\images\divider.gif" />
     <Content Include="Content\images\FileAttente.jpg" />
+    <Content Include="Content\images\header1.gif" />
+    <Content Include="Content\images\header2.gif" />
+    <Content Include="Content\images\headerbg.gif" />
     <Content Include="Content\images\LesCons.jpg" />
+    <Content Include="Content\images\logo.gif" />
+    <Content Include="Content\images\navigation.gif" />
+    <Content Include="Content\images\readmore.gif" />
+    <Content Include="Content\images\search.gif" />
     <Content Include="Content\images\YoutubeComment.jpg" />
+    <Content Include="Content\images\_featured.jpg" />
+    <Content Include="Content\images\_flickr1.jpg" />
+    <Content Include="Content\images\_flickr2.jpg" />
+    <Content Include="Content\images\_flickr3.jpg" />
+    <Content Include="Content\images\_flickr4.jpg" />
+    <Content Include="Content\images\_flickr5.jpg" />
+    <Content Include="Content\images\_flickr6.jpg" />
+    <Content Include="Content\images\_thumb1.jpg" />
+    <Content Include="Content\images\_thumb2.jpg" />
+    <Content Include="Content\images\_thumb3.jpg" />
+    <Content Include="Content\images\_thumb4.jpg" />
+    <Content Include="Content\images\_thumb5.jpg" />
+    <Content Include="Content\images\_thumb6.jpg" />
+    <Content Include="Content\images\_video.jpg" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -94,6 +121,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -117,6 +145,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_lstNews.cshtml" />
     <Content Include="Views\Shared\_Layout_Template.cshtml" />
+    <Content Include="Views\News\NewsDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,7 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\css\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,19 @@
+﻿@model InfosNews.DAL.News
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- begin more articles -->
+<div class="articles">
+    <!-- begin post -->
+    <div class="single">
+        <h2>@Model.NewsTitre</h2>
+        <p><img class="aligncenter" src="~/Content/images/@Model.NewsPicture" width="525" height="275" alt="" /></p>
+        <p>@Model.NewsTxt</p>
+        <p class="l"> <span class="category"><a href="#">Catégorie</a></span> - Posted by <a href="#">@Model.idAuteur</a> on @Model.NewsDate</p>
+    </div>
+    <!-- end post -->
+    <div class="break"></div>
+</div>
+<!-- end more articles -->
