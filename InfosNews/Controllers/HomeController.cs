@@ -1,4 +1,5 @@
 ﻿using InfosNews.DAL;
+using InfosNews.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,12 @@ namespace InfosNews.Controllers
         // GET: /Home/
         public ActionResult Index()
         {
-            List<News> mesNews = News.getFiveNews();
-            return View(mesNews);
+            List<News> lstNews = new List<News>();
+            lstNews = News.getFiveNews();
+            return View(lstNews);
+            //NewsAuteurModel nam = new NewsAuteurModel();
+            //nam.MesNews = News.getFiveNews();
+            //nam.NomAuteur = Auteurs.getAllAuteurs();
         }
 	}
 }

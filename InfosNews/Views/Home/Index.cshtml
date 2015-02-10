@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<InfosNews.DAL.News>
 
-@foreach (InfosNews.DAL.News currentNews in Model) 
+@foreach(InfosNews.DAL.News currentNews in Model) 
 {
     Html.RenderPartial("_lstNews", currentNews);
 }
