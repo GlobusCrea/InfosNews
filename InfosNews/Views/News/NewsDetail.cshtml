@@ -11,7 +11,7 @@
         <h2>@Model.NewsTitre</h2>
         <p><img class="aligncenter" src="~/Content/images/@Model.NewsPicture" width="525" height="275" alt="" /></p>
         <p>@Model.NewsTxt</p>
-        <p class="l"> <span class="category"><a href="#">Catégorie</a></span> - Posted by <a href="#">@Model.idAuteur</a> on @Model.NewsDate</p>
+        <p class="l"> <span class="category"><a href="#">Catégorie</a></span> - Posted by <a href="~/News/NewsByAuteur/@Model.idAuteur">@Model.Auteur.auteurPrenom @Model.Auteur.auteurNom</a> on @Model.NewsDate</p>
     </div>
     <!-- end post -->
     <div class="break"></div>

@@ -155,6 +155,7 @@
     <Content Include="Views\Shared\_lstNews.cshtml" />
     <Content Include="Views\Shared\_Layout_Template.cshtml" />
     <Content Include="Views\News\NewsDetail.cshtml" />
+    <Content Include="Views\News\NewsByAuteur.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -9,7 +9,7 @@
         <h2><a href="~/News/NewsDetail/@Model.idNews">@Model.NewsTitre</a></h2>
         <p>@Model.NewsResume</p>
         <div class="details">
-            <p class="l"> <span class="category"><a href="#">Catégorie (à implémenter)</a></span> - Posted by <a href="#">@Model.NomAuteur.auteurNom</a> on @Model.NewsDate</p>
+            <p class="l"> <span class="category"><a href="#">Catégorie (à implémenter)</a></span> - Posted by <a href="~/News/NewsByAuteur/@Model.idAuteur">@Model.Auteur.auteurPrenom @Model.Auteur.auteurNom</a> on @Model.NewsDate</p>
             <p class="r"> <a href="#">!!!Comments à implémenter!!!</a> </p>
         </div>
     </div>

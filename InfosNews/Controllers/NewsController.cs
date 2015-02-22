@@ -16,5 +16,11 @@ namespace InfosNews.Controllers
             News newsDetail = News.getOneNews(id);
             return View(newsDetail);
         }
+
+        public ActionResult NewsByAuteur(int id)
+        {
+            List<News> newsByAuteur = Auteurs.getNewsByAuteur(id);
+            return View(newsByAuteur);
+        }
 	}
 }
