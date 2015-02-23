@@ -25,7 +25,7 @@ namespace InfosNews.Areas.Admin.Controllers
         public ActionResult addAuteur(Auteurs a)
         {
             a.saveAuteur();
-            return RedirectToAction("Index");
+            return RedirectToRoute(new { area = "", controller = "Home", action = "ListeAuteurs"});
         }
 
         [HttpGet]
@@ -33,7 +33,7 @@ namespace InfosNews.Areas.Admin.Controllers
         {
             Auteurs a = Auteurs.getOneAuteur(id);
             a.deleteAuteur();
-            return RedirectToAction("Index");
+            return RedirectToRoute(new { area = "", controller = "Home", action = "ListeAuteurs" });
         }
     }
 }

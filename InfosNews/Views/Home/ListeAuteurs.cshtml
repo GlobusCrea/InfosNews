@@ -13,7 +13,7 @@
 </head>
 <body>
     <p>
-        @Html.ActionLink("New", "addAuteur", new { Controller = "Admin/Home"})
+        @Html.ActionLink("New", "addAuteur", new { area = "Admin", controller = "Home"})
     </p>
     <table class="table">
         <tr>
@@ -60,7 +60,7 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "deleteAuteur", new { Controller = "Admin/Home", id = item.idAuteur })
+                @Html.ActionLink("Delete", "deleteAuteur", new { area = "Admin", Controller = "Home", id = item.idAuteur })
             </td>
         </tr>
     }
