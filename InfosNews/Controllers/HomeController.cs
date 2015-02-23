@@ -21,5 +21,12 @@ namespace InfosNews.Controllers
             //nam.MesNews = News.getFiveNews();
             //nam.NomAuteur = Auteurs.getAllAuteurs();
         }
+
+        public ActionResult ListeAuteurs()
+        {
+            List<Auteurs> lstAuteurs = new List<Auteurs>();
+            lstAuteurs = Auteurs.getAllAuteurs();
+            return View(lstAuteurs);
+        }
 	}
 }

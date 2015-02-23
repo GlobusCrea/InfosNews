@@ -1,0 +1,70 @@
+﻿@model IEnumerable<InfosNews.DAL.Auteurs>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nos Auteurs</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("New", "addAuteur", new { Controller = "Admin/Home"})
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idAuteur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.auteurNom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.auteurPrenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.auteurPower)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.auteurLogin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.auteurPassword)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idAuteur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.auteurNom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.auteurPrenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.auteurPower)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.auteurLogin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.auteurPassword)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "deleteAuteur", new { Controller = "Admin/Home", id = item.idAuteur })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
