@@ -108,7 +108,7 @@ namespace InfosNews.DAL
 
         public static List<News> getAllNews()
         {
-            List<Dictionary<string, object>> desNews = GestionConnexion.Instance.getData("SELECT * FROM tblNews");
+            List<Dictionary<string, object>> desNews = GestionConnexion.Instance.getData("SELECT * FROM tblNews ORDER BY NewsDate DESC");
             List<News> lstNews = new List<News>();
             foreach(Dictionary<string,object> item in desNews)
             {
@@ -147,7 +147,7 @@ namespace InfosNews.DAL
             }
             else
             {
-                strRequest = "UPDATE tblAuteurs SET idAuteur = @idAuteur,NewsPicture = @NewsPicture,NewsDate = @NewsDate,NewsTitre = @NewsTitre,NewsTxt = @NewsTxt,NewsResume = @NewsResume ";
+                strRequest = "UPDATE tblNews SET idAuteur = @idAuteur,NewsPicture = @NewsPicture,NewsDate = @NewsDate,NewsTitre = @NewsTitre,NewsTxt = @NewsTxt,NewsResume = @NewsResume WHERE idNews = " + this.idNews;
             }
 
             Dictionary<string, object> ValueToSave = new Dictionary<string, object>();
@@ -175,7 +175,7 @@ namespace InfosNews.DAL
         /// <returns></returns>
         public bool deleteNews()
         {
-            string strRequest = "DELETE FOM tblNews WHERE idNews = @idNews";
+            string strRequest = "DELETE FROM tblNews WHERE idNews = @idNews";
             Dictionary<string, object> ValueToDelete = new Dictionary<string, object>();
             ValueToDelete["idNews"] = this.idNews;
             return GestionConnexion.Instance.saveData(strRequest, GenerateKey.APP, ValueToDelete);

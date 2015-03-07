@@ -17,7 +17,7 @@ Template NEWS MAGAZINE
         <!-- BEGIN header -->
         <div id="header">
             <ul class="pages">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index">Home</a></li>
                 <li><a href="~/Home/ListeAuteurs">Nos Auteurs</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -43,13 +43,17 @@ Template NEWS MAGAZINE
         <div id="sidebar">
             <!-- begin sponsors -->
             <div class="box">
-                <h2>Sponsors</h2>
-                <div class="sponsors"> <a href="#"><img src="~/Content/images/ad125x125.jpg" alt="" /></a> <a href="#"><img src="~/Content/images/ad125x125.jpg" alt="" /></a> <a href="#"><img src="~/Content/images/ad125x125.jpg" alt="" /></a> <a href="#"><img src="~/Content/images/ad125x125.jpg" alt="" /></a> </div>
+                <h2 class="title">Login</h2>
+                <ul>
+                    <li><a href="~/Admin/Home/addNews">Add News</a></li>
+                    <li><a href="~/Home/allNews">All News</a></li>
+                </ul>
+                
             </div>
             <!-- end sponsors -->
             <!-- begin popular posts -->
             <div class="box">
-                <h2>Popular Posts</h2>
+                <h2 class="title">Popular Posts</h2>
                 <ul>
                     <li><a href="#">Pellentesque Aapien Orci Blandit</a></li>
                     <li><a href="#">Nam Et Nisi Ut Nunc Sequitor</a></li>
@@ -61,16 +65,16 @@ Template NEWS MAGAZINE
             </div>
             <!-- end popular posts -->
             <!-- begin flickr photos -->
-            <div class="box">
-                <h2>Flickr Photos</h2>
+            @*<div class="box">
+                <h3>Flickr Photos</h3>
                 <div class="flickr"> <a href="#"><img src="~/Content/images/_flickr1.jpg" alt="" /></a> <a href="#"><img src="~/Content/images/_flickr2.jpg" alt="" /></a> <a href="#"><img src="~/Content/images/_flickr3.jpg" alt="" /></a> <a href="#"><img src="~/Content/images/_flickr4.jpg" alt="" /></a> <a href="#"><img src="~/Content/images/_flickr5.jpg" alt="" /></a> <a href="#"><img src="~/Content/images/_flickr6.jpg" alt="" /></a> </div>
-            </div>
+            </div>*@
             <!-- end flickr photos -->
             <!-- BEGIN left -->
             <div class="l sidebar">
                 <!-- begin pages -->
                 <div class="box">
-                    <h2>Pages</h2>
+                    <h2 class="title">Pages</h2>
                     <ul>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Archives</a></li>
@@ -81,7 +85,7 @@ Template NEWS MAGAZINE
                 <!-- end pages -->
                 <!-- begin categories -->
                 <div class="box">
-                    <h2>Categories</h2>
+                    <h2 class="title">Categories</h2>
                     <ul>
                         <li><a href="#">Advertising</a></li>
                         <li><a href="#">Fashion</a></li>
@@ -98,28 +102,28 @@ Template NEWS MAGAZINE
             <!-- BEGIN right -->
             <div class="r sidebar">
                 <!-- begin blogroll -->
-                <div class="box">
-                    <h2>Blogroll</h2>
+                @*<div class="box">
+                    <h3>Blogroll</h3>
                     <ul>
                         <li><a href="#">Documentation</a></li>
                         <li><a href="#">Suggest Ideas</a></li>
                         <li><a href="#">Support Forum</a></li>
                     </ul>
-                </div>
+                </div>*@
                 <!-- end blogroll -->
                 <!-- begin meta -->
-                <div class="box">
-                    <h2>Meta</h2>
+                @*<div class="box">
+                    <h3>Meta</h3>
                     <ul>
                         <li><a href="#">Site Admin</a></li>
                         <li><a href="#">Log out</a></li>
                         <li><a href="#">Valid XHTML</a></li>
                     </ul>
-                </div>
+                </div>*@
                 <!-- end meta -->
                 <!-- begin archives -->
                 <div class="box">
-                    <h2>Archives</h2>
+                    <h2 class="title">Archives</h2>
                     <ul>
                         <li><a href="#">January 2009</a></li>
                         <li><a href="#">November 2008</a></li>

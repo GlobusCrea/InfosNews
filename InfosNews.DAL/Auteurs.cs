@@ -142,7 +142,7 @@ namespace InfosNews.DAL
             }
             else
             {
-                strRequest = "UPDATE tblAuteurs SET AuteurNom = @AuteurNom,AuteurPrenom = @AuteurPrenom,AuteurPower = @AuteurPower,AuteurLogin = @AuteurLogin,AuteurPassword = @AuteurPassword";
+                strRequest = "UPDATE tblAuteurs SET AuteurNom = @AuteurNom,AuteurPrenom = @AuteurPrenom,AuteurPower = @AuteurPower,AuteurLogin = @AuteurLogin,AuteurPassword = @AuteurPassword WHERE idAuteur = " + this.idAuteur;
             }
 
             Dictionary<string, object> ValueToSave = new Dictionary<string, object>();

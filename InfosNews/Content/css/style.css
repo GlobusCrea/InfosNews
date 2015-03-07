@@ -6,7 +6,7 @@ body {
 	text-align: center;
 	font: 12px Verdana;
 	color: #112222;
-	background: url(~/Content/images/background.gif) repeat-x 0 0;
+	background: url(/Content/images/background.gif) repeat-x 0 0;
 }
 
 a {
@@ -59,7 +59,7 @@ img {
 /** BEGIN header **/
 #header {
 	padding-bottom: 5px;
-	background: url(~/Content/images/headerbg.gif) repeat-x 0 0;
+	background: url(/Content/images/headerbg.gif) repeat-x 0 0;
 }
 
 #header .pages {
@@ -81,10 +81,10 @@ img {
 	padding: 10px 10px 11px;
 }
 
-/*#header form {
+#header form {
 	float: right;
 	width: 238px; height: 35px;
-	background: url(~/Content/images/search.gif) no-repeat 62px 8px;
+	background: url(/Content/images/search.gif) no-repeat 62px 8px;
 }
 
 #header form p {
@@ -110,7 +110,7 @@ img {
 	width: 21px; height: 21px;
 	margin-top: 8px;
 	background-color: transparent;
-}*/
+}
 
 #header h1 {
 	clear: both;
@@ -124,7 +124,7 @@ img {
 	width: 373px; height: 41px;
 	text-indent: 0px;
 	outline: none;
-	background: url(~/Content/images/logo.gif) no-repeat 0 0;
+	/*background: url(/Content/images/logo.gif) no-repeat 0 0;*/
 }
 
 #header .ad {
@@ -136,7 +136,7 @@ img {
 	clear: both;
 	list-style-type: none;
 	height: 35px;
-	background: url(~/Content/images/navigation.gif) repeat-x 0 0;
+	background: url(/Content/images/navigation.gif) repeat-x 0 0;
 	border: 1px solid #CCCCCC;
 	overflow: hidden;
 }
@@ -146,7 +146,7 @@ img {
 	text-transform: uppercase;
 	font-size: 0.9em;
 	padding-right: 2px;
-	background: url(~/Content/images/divider.gif) no-repeat right 1px;
+	background: url(/Content/images/divider.gif) no-repeat right 1px;
 }
 
 #header .categories li a {
@@ -184,7 +184,7 @@ border: 1px solid #CBDDDD;
 	clear: both;
 	font-size: 0.9em;
 	height: 22px;
-	background: url(~/Content/images/details.gif) repeat-x 0 0;
+	background: url(/Content/images/details.gif) repeat-x 0 0;
 	margin-bottom: 10px;
 }
 
@@ -266,7 +266,7 @@ padding: 10px 0 20px;
 #content h2.title {
 font-size: 0.8em;
 text-transform: uppercase;
-background: url(~/Content/images/header1.gif) no-repeat center 0;
+background: url(/Content/images/header1.gif) no-repeat center 0;
 color: #ffffff;
 width: 175px;
 text-align: center;
@@ -354,11 +354,11 @@ padding: 10px;
 #sidebar h2 {
 	font-size: 0.8em;
 	text-transform: uppercase;
-	background: url(~/Content/images/header1.gif) no-repeat center 0;
+	background: url(/Content/Images/header2.gif) no-repeat center 0;
 	color: #ffffff;
 	width: 175px;
 	text-align: center;
-	padding: 1px 0 3px;
+	padding: 0px 0 3px;
 	margin-bottom: 10px;
 }
 
@@ -411,7 +411,7 @@ padding: 10px;
 }
 
 #sidebar .sidebar h2 {
-	background: url(~/Content/images/header2.gif) no-repeat center 0;
+	background: url(/Content/images/header2.gif) no-repeat center 0;
 	width: 156px;
 }
 
@@ -524,7 +524,7 @@ padding: 10px;
 }
 
 h2.title {
-    font-size: 1em !important;
+    font-size: 0.8em !important;
     text-transform: uppercase;
     padding: 10px;
     color: #565656;

@@ -1,5 +1,4 @@
 ﻿using InfosNews.DAL;
-using InfosNews.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +16,13 @@ namespace InfosNews.Controllers
             List<News> lstNews = new List<News>();
             lstNews = News.getFiveNews();
             return View(lstNews);
-            //NewsAuteurModel nam = new NewsAuteurModel();
-            //nam.MesNews = News.getFiveNews();
-            //nam.NomAuteur = Auteurs.getAllAuteurs();
+        }
+
+        public ActionResult allNews()
+        {
+            List<News> lstNews = new List<News>();
+            lstNews = News.getAllNews();
+            return View(lstNews);
         }
 
         public ActionResult ListeAuteurs()
