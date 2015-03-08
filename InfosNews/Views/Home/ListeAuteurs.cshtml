@@ -48,7 +48,7 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "editAuteur", new { area = "Admin", Controller = "Home", id = item.idAuteur }) |
-                @Html.ActionLink("Delete", "deleteAuteur", new { area = "Admin", Controller = "Home", id = item.idAuteur })
+                <a href="~/Admin/Home/deleteAuteur/@item.idAuteur" onclick="return confirm('Voulez-vous supprimer cet Auteur ?')">Delete</a>
             </td>
         </tr>
     }

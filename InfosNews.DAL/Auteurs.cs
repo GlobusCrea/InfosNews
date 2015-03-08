@@ -67,22 +67,11 @@ namespace InfosNews.DAL
 
         #region Static
 
-        public static Auteurs getChampsAuteurs(Dictionary<string,object> item)
-        {
-            Auteurs aut = new Auteurs();
-            aut.idAuteur = (int)item["idAuteur"];
-            aut.auteurNom = item["AuteurNom"].ToString();
-            aut.auteurPrenom = item["AuteurPrenom"].ToString();
-            aut.auteurPower = (int)item["AuteurPower"];
-            aut.auteurLogin = item["AuteurLogin"].ToString();
-            aut.auteurPassword = item["AuteurPassword"].ToString();
-            return aut;
-        }
-
         public static Auteurs getOneAuteur(int idAuteur)
         {
             List<Dictionary<string, object>> unAuteur = GestionConnexion.Instance.getData("SELECT * FROM tblAuteurs WHERE idAuteur =" + idAuteur);
-            Auteurs auteur = getChampsAuteurs(unAuteur[0]);
+            Auteurs auteur = new Auteurs();
+            auteur.getChampsAuteurs(unAuteur[0]);
             return auteur;
         }
 
@@ -92,7 +81,8 @@ namespace InfosNews.DAL
             List<Auteurs> lstAuteurs = new List<Auteurs>();
             foreach(Dictionary<string,object> item in desAuteurs)
             {
-                Auteurs auteur = getChampsAuteurs(item);
+                Auteurs auteur = new Auteurs();
+                auteur.getChampsAuteurs(item);
                 lstAuteurs.Add(auteur);
             }
             return lstAuteurs;
@@ -111,9 +101,31 @@ namespace InfosNews.DAL
             return news;
         }
 
+        public static Auteurs getLoginPass(string login, string password)
+        {
+            List<Dictionary<string, object>> lp = GestionConnexion.Instance.getData("SELECT * from tblAuteurs where  AuteurLogin='" + login + "' and AuteurPassword='" + password + "'");
+            if (lp.Count > 0)
+            {
+                Auteurs auteur = new Auteurs();
+                auteur.getChampsAuteurs(lp[0]);
+                return auteur;
+            }
+            return null;
+        }
+
         #endregion
 
         #region Function
+
+        public void getChampsAuteurs(Dictionary<string, object> item)
+        {
+            this.idAuteur = (int)item["idAuteur"];
+            this.auteurNom = item["AuteurNom"].ToString();
+            this.auteurPrenom = item["AuteurPrenom"].ToString();
+            this.auteurPower = (int)item["AuteurPower"];
+            this.auteurLogin = item["AuteurLogin"].ToString();
+            this.auteurPassword = item["AuteurPassword"].ToString();
+        }
 
         public static List<News> getNewsByAuteur(int id)
         {

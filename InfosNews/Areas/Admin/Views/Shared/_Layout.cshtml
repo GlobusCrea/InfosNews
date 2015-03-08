@@ -18,7 +18,7 @@ Template NEWS MAGAZINE
         <div id="header">
             <ul class="pages">
                 <li><a href="index">Home</a></li>
-                <li><a href="~/Home/allNews">Toutes les News</a></li>
+                <li><a href="~/Home/ListeAuteurs">Nos Auteurs</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="break"></div>
@@ -43,37 +43,21 @@ Template NEWS MAGAZINE
         <div id="sidebar">
             <!-- begin sponsors -->
             <div class="box">
-                @if (InfosNews.Helper.SessionTools.Login == null)
-                {
-                    <h2 class="title">Login</h2>
-                    <ul>
-                        <li><a href="~/Admin/Login/Login">Login</a></li>
-                    </ul>
-                }
-                else if (InfosNews.Helper.SessionTools.auteur.auteurPower == 0)
-                {
-                    <h2 class="title">@InfosNews.Helper.SessionTools.Login</h2>
-                    <ul>
-                        <li><a href="~/Admin/Login/LogOut">Logout</a></li>
-                        <li><a href="~/Home/ListeAuteurs">Auteurs</a></li>
-                        <li><a href="~/Admin/Home/addNews">Add News</a></li>
-                    </ul>
-                }
-                else if (InfosNews.Helper.SessionTools.auteur.auteurPower == 1 || InfosNews.Helper.SessionTools.auteur.auteurPower == 2)
-                {
-                    <h2 class="title">@InfosNews.Helper.SessionTools.Login</h2>
-                    <ul>
-                        <li><a href="~/Admin/Login/LogOut">Logout</a></li>
-                        <li><a href="~/Admin/Home/addNews">Add News</a></li>
-                    </ul>
-                }
-                else
-                {
-                    <h2 class="title">@InfosNews.Helper.SessionTools.Login</h2>
-                    <ul>
-                        <li><a href="~/Admin/Login/LogOut">Logout</a></li>
-                    </ul>
-                }
+                <h2 class="title">Login</h2>
+                <ul>
+                    @*@if (InfosNews.Helper.SessionTools.auteur.auteurPower == 0)*@
+                    @if (Session["Login"] == null)
+                    {
+                        <li><a href="~/Admin/Home/Login">Login</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="~/Admin/Login/LogOut">@Session["Login"]</a></li>
+                    }
+                    <li><a href="~/Admin/Home/addNews">Add News</a></li>
+                    <li><a href="~/Home/allNews">All News</a></li>
+                </ul>
+                
             </div>
             <!-- end sponsors -->
             <!-- begin popular posts -->
@@ -98,7 +82,7 @@ Template NEWS MAGAZINE
             <!-- BEGIN left -->
             <div class="l sidebar">
                 <!-- begin pages -->
-                @*<div class="box">
+                <div class="box">
                     <h2 class="title">Pages</h2>
                     <ul>
                         <li><a href="#">About</a></li>
@@ -106,7 +90,7 @@ Template NEWS MAGAZINE
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Links</a></li>
                     </ul>
-                </div>*@
+                </div>
                 <!-- end pages -->
                 <!-- begin categories -->
                 <div class="box">
@@ -147,14 +131,14 @@ Template NEWS MAGAZINE
                 </div>*@
                 <!-- end meta -->
                 <!-- begin archives -->
-                @*<div class="box">
+                <div class="box">
                     <h2 class="title">Archives</h2>
                     <ul>
                         <li><a href="#">January 2009</a></li>
                         <li><a href="#">November 2008</a></li>
                         <li><a href="#">October 2008</a></li>
                     </ul>
-                </div>*@
+                </div>
                 <!-- end archives -->
             </div>
             <!-- END right -->

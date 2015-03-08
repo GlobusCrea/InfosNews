@@ -13,8 +13,15 @@
         <p>@Model.NewsTxt</p>
         <p class="l"> <span class="category"><a href="#">Catégorie</a></span> - Posted by <a href="~/News/NewsByAuteur/@Model.idAuteur">@Model.Auteur.auteurPrenom @Model.Auteur.auteurNom</a> on @Model.NewsDate</p>
         <p>
-            @Html.ActionLink("Edit", "editNews", new { area = "Admin", Controller = "Home", id = @Model.idNews }) |
-            @Html.ActionLink("Delete", "deleteNews", new { area = "Admin", Controller = "Home", id = @Model.idNews })
+            @if (InfosNews.Helper.SessionTools.Login == null)
+            {
+                <a href="~/Admin/Login/Login">Login</a>
+            }
+            else if (InfosNews.Helper.SessionTools.auteur.auteurPower == 0 || InfosNews.Helper.SessionTools.auteur.auteurPower == 1)
+            { 
+                @Html.ActionLink("Edit", "editNews", new { area = "Admin", Controller = "Home", id = @Model.idNews })
+                <a href="~/Admin/Home/deleteNews/@Model.idNews" onclick="return confirm('Voulez-vous supprimer cette News ?')">Delete</a>
+            }
         </p>
     </div>
     <!-- end post -->
