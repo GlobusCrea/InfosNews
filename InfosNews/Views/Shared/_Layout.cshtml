@@ -7,7 +7,17 @@ Template NEWS MAGAZINE
 <head>
     <title>InfosNews</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css" />
+    <!--<link rel="stylesheet" type="text/css" href="~/Content/css/style.css" />-->
+
+    <!-- APPEL BUNDLE CSS -->
+    @System.Web.Optimization.Styles.Render("~/Content/css")
+    
+    <!-- APPEL BUNDLE SCRIPTS -->
+    @* @System.Web.Optimization.Scripts.Render("~/Scripts/jquery");
+       @System.Web.Optimization.Scripts.Render("~/Scripts/bootstrap");
+       @System.Web.Optimization.Scripts.Render("~/Scripts/custom"); *@
+
+
     <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="ie.css" /><![endif]-->
 </head>
 <body>
@@ -24,11 +34,11 @@ Template NEWS MAGAZINE
             <div class="break"></div>
             <h1><a href="~/Home/Index">Infos News</a></h1>
             <ul class="categories">
-                <li><a href="#">Advertising</a></li>
-                <li><a href="#">Fashion</a></li>
-                <li><a href="#">Food</a></li>
-                <li><a href="#">Lifestyle</a></li>
-                <li><a href="#">Photos</a></li>
+                <li><a href="#">Monde Libre</a></li>
+                <li><a href="#">Hi-Tech</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Sciences</a></li>
+                <li><a href="#">People</a></li>
             </ul>
         </div>
         <!-- END header -->

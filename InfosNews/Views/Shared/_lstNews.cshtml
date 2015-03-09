@@ -1,4 +1,5 @@
-﻿@model InfosNews.DAL.News
+﻿@using InfosNews.Helper
+@model InfosNews.DAL.News
 
 <!-- begin more articles -->
 <div class="articles">
@@ -12,6 +13,9 @@
             <p class="l"> <span class="category"><a href="#">Catégorie (à implémenter)</a></span> - Posted by <a href="~/News/NewsByAuteur/@Model.idAuteur">@Model.Auteur.auteurPrenom @Model.Auteur.auteurNom</a> on @Model.NewsDate</p>
             <p class="r"> <a href="#">!!!Comments à implémenter!!!</a> </p>
         </div>
+        @*<div>
+            @Html.BoldTitle("prout", "Charlemagne")
+        </div>*@
     </div>
     <!-- end post -->
     <div class="break"></div>
